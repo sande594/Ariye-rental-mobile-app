@@ -145,6 +145,11 @@ export default function HomeScreen() {
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         {/* Header */}
         <View style={styles.header}>
+          <Image 
+            source={require('../../assets/rentalImage.png')} 
+            style={styles.headerLogo}
+            resizeMode="contain"
+          />
           <View>
             <Text style={styles.greeting}>Hello{user?.full_name ? `, ${user.full_name}` : ''}!</Text>
             <Text style={styles.subtitle}>Find your perfect ride</Text>
@@ -276,6 +281,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 20,
     backgroundColor: '#fff',
+  },
+  headerLogo: {
+    width: 40,
+    height: 40,
+    marginRight: 12,
   },
   greeting: {
     fontSize: 24,

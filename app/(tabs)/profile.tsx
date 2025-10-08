@@ -148,9 +148,11 @@ export default function ProfileScreen() {
             {user.avatar_url ? (
               <Image source={{ uri: user.avatar_url }} style={styles.avatar} />
             ) : (
-              <View style={styles.avatarPlaceholder}>
-                <Ionicons name="person" size={40} color="#fff" />
-              </View>
+              <Image 
+                source={require('../../assets/rentalImage.png')} 
+                style={styles.avatarPlaceholder}
+                resizeMode="contain"
+              />
             )}
           </View>
           <View style={styles.userInfo}>
@@ -276,10 +278,6 @@ const styles = StyleSheet.create({
   avatarPlaceholder: {
     width: 60,
     height: 60,
-    borderRadius: 30,
-    backgroundColor: '#ff6b35',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   userInfo: {
     flex: 1,

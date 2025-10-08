@@ -9,6 +9,7 @@ import {
   KeyboardAvoidingView,
   Platform,
   ScrollView,
+  Image,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
@@ -63,9 +64,11 @@ export default function LoginScreen() {
 
           <View style={styles.content}>
             <View style={styles.logoContainer}>
-              <View style={styles.logo}>
-                <Ionicons name="car-sport" size={48} color="#ff6b35" />
-              </View>
+              <Image 
+                source={require('../../assets/rentalImage.png')} 
+                style={styles.logo}
+                resizeMode="contain"
+              />
               <Text style={styles.title}>Welcome Back</Text>
               <Text style={styles.subtitle}>Sign in to your account</Text>
             </View>
@@ -175,10 +178,6 @@ const styles = StyleSheet.create({
   logo: {
     width: 80,
     height: 80,
-    borderRadius: 40,
-    backgroundColor: '#fff5f2',
-    alignItems: 'center',
-    justifyContent: 'center',
     marginBottom: 20,
   },
   title: {

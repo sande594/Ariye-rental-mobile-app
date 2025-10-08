@@ -6,6 +6,7 @@ import {
   ScrollView,
   TouchableOpacity,
   Dimensions,
+  Image,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
@@ -135,6 +136,11 @@ export default function AdminDashboard() {
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         {/* Welcome Section */}
         <View style={styles.welcomeCard}>
+          <Image 
+            source={require('../../assets/rentalImage.png')} 
+            style={styles.welcomeLogo}
+            resizeMode="contain"
+          />
           <Text style={styles.welcomeTitle}>Welcome, Admin!</Text>
           <Text style={styles.welcomeSubtitle}>
             Here's an overview of your rental business
@@ -282,16 +288,24 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     elevation: 4,
   },
+  welcomeLogo: {
+    width: 60,
+    height: 60,
+    alignSelf: 'center',
+    marginBottom: 16,
+  },
   welcomeTitle: {
     fontSize: 24,
     fontWeight: '700',
     color: '#333',
     marginBottom: 8,
+    textAlign: 'center',
   },
   welcomeSubtitle: {
     fontSize: 16,
     color: '#666',
     lineHeight: 22,
+    textAlign: 'center',
   },
   statsGrid: {
     flexDirection: 'row',
