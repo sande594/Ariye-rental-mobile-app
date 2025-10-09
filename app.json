@@ -4,7 +4,7 @@
     "slug": "aryeh-rentals",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/rentalImage.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
